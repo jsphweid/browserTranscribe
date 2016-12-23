@@ -1,0 +1,62 @@
+#verticalLine {
+    border-left: solid black;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+}
+
+
+/*theme?*/
+/*	#D7CEC7, #565656, #76323F, #C09F80	*/
+
+
+.speedSelectDiv {
+	background-color: black;
+}
+
+.speedSelect {
+	list-style-type:none;
+	margin:25px 0 0 0;
+	padding:0;
+	color: #565656;
+	text-align: center;
+}
+
+.speedSelect li {
+	float:left;
+	margin:0 5px 0 0;
+    width:50px;
+    height:40px;
+    position:relative;
+}
+
+.speedSelect label, .speedSelect input {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.speedSelect input[type="radio"] {
+    opacity:0.011;
+    z-index:100;
+}
+
+.speedSelect input[type="radio"]:checked + label {
+    background: #C09F80;
+}
+
+.speedSelect label {
+	padding:5px;
+	border:1px solid #CCC; 
+	cursor:pointer;
+    z-index:90;
+    background-color: #D7CEC7;
+}
+
+.speedSelect label:hover {
+     background:#DDD;
+}

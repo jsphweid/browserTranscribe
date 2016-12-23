@@ -1,31 +1,32 @@
-# BrowserTranscribe
+# browserTranscribe
+Web App that allows you to load an audio file in your browser and hop all around the file easily, repeat a section indefinitely, and slow down the tempo without changing pitch.
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
+## Dev Environment
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`git clone https://github.com/jsphweid/browserTranscribe.git` to clone to directory
 
-## Code scaffolding
+`npm install` to download dependencies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+`npm start` to serve up the app
 
-## Build
+`grunt js-hint` to jshint on '/js' files and `grunt html-hint` to root html files (index.html)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+`grunt build` to make production build to '/build' folder
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## TODO
+ - Add import audio file, browse, drop. More advanced: get mp3 from youtube (legal?)
+ - Add hotkeys to common functions (advanced restart bar, change speed, scroll left/right, etc.)
+ - Add hotkey map
+ - Find a better way to integrate the time stretch / preserve with [WaveSurfer](wavesurfer-js.org). In the current version, I achieved this by making a mess in his library file, which I would like to abstract in the near future.
+ - There are still some clicks with starting and stopping. I want to find a better way to fade in / out so that the clicks will disappear. And I want to do this by, again, not messing up WaveSurfer's library file.
 
-## Running end-to-end tests
+## Future Direction
+##### Drum Transcribing
+This project will be complete for me when there is a second canvas in the bottom half of the screen that corresponds to the wave vertically. You can click and create a 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## PROBLEMS?
+##### OSX - Right/Left Scrolling keeps changes webpages
+You might be able to change the settings here:
+`System Preferences > Trackpad > More Gestures > Swipe between pages --> Swipe with three fingersit`
+Or just write this to the terminal: `defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE`

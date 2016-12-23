@@ -1,14 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>BrowserTranscribe</title>
-  <base href="/">
+	<title>Small Test</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<!-- <<<<<<<<<<<<<<<< bootstrap css >>>>>>>>>>>>>>> -->
+	<!-- <<<<<<<<<<<<<<<< will be replaced with cdn link on build >>>>>>>>>>>>>>> -->
+	<link rel="stylesheet" type="text/css" href="offline/bootstrap-3.3.7.css">
+
+	<!-- <<<<<<<<<<<<<<<< customs >>>>>>>>>>>>>>> -->
+	<link rel="stylesheet" type="text/css" href="css/myCss.css">
 </head>
 <body>
-  <app-root>Loading...</app-root>
+	
+	<!-- test spacer -->
+	<div class="container">
+		<div class="row">
+			<h1 style="text-align: center;">browserTranscribe</h1>
+		</div>
+	</div>
+
+	<!-- speed controls -->
+	<div class="container">
+		<div class="row">
+			<ul class="speedSelect">
+				<li>
+				    <input type="radio" id="25" name="percent" />
+				    <label for="25">25%</label>
+				</li>
+				<li>
+				    <input type="radio" id="35" name="percent" />
+				    <label for="35">35%</label>
+				</li>
+				<li>
+				    <input type="radio" id="50" name="percent" />
+				    <label for="50">50%</label>
+				</li>
+				<li>
+				    <input type="radio" id="75" name="percent" />
+				    <label for="75">75%</label>
+				</li>
+				<li>
+				    <input type="radio" id="100" name="percent" checked="checked"/>
+				    <label for="100">100%</label>
+				</li>
+				<li>
+				    <input type="radio" id="150" name="percent" />
+				    <label for="150">150%</label>
+				</li>
+				<li>
+				    <input type="radio" id="200" name="percent" />
+				    <label for="200">200%</label>
+				</li>				
+			</ul>			
+		</div>
+	</div>
+	
+	<!-- wavesurfer -->
+	<div id="waveform">
+		<div id="verticalLine"></div>
+	</div>
+
+	<!-- <<<<<<<<<<<<<<<< soundtouch >>>>>>>>>>>>>>> -->
+	<script src="js/SoundTouch-merged.js"></script>
+
+	<!-- <<<<<<<<<<<<<<<<<<<<< wavesurfer >>>>>>>>>>>>>>>>>>>> -->
+	<script src="js/wavesurfer.js"></script>
+	<script src="js/wavesurfer-regions.js"></script>
+
+	<!-- <<<<<<<<<<<<<<<<<<<<< jquery and bootstrap >>>>>>>>>>>>>>>>>>>> -->
+	<!-- <<<<<<<<<<<<<<<<<<<<< will be replaced with CDN links on build >>>>>>>>>>>>>>>>>>>> -->
+	<script src="offline/jquery-3.1.1.js"></script>
+	<script src="offline/bootstrap-3.3.7.js"></script>
+
+	<!-- <<<<<<<<<<<<<<<<<<<<< MAIN >>>>>>>>>>>>>>>>>>>> -->
+	<script src="js/main.js"></script>
 </body>
 </html>
