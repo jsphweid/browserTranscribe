@@ -16,8 +16,34 @@ module.exports = function(grunt) {
             },
         },
 
+        // concat
+        concat: {
+            js: {
+                src: [ // in this order...
+                    './build/js/SoundTouch-merged.js',
+                    './build/js/wavesurfer.js',
+                    './build/js/wavesurfer-regions.js',
+                    './build/js/jquerymods.js', 
+                    './build/js/dropZone.js',
+                    './build/js/main.js'
+                ],
+                dest: './build/js/concat.js'
+            },
+            css: {
+                src: './build/css/*.css',
+                dest: './build/css/concat.css'
+            }
+        },
+
         // clean
-        clean: { folder : ['./build']},
+
+        clean: {
+            folder : ['./build']
+            // dist2: {
+            //     contents : ['build/js/*.js', '!build/js/*.min.js']
+            // }
+        },
+
 
         'string-replace': {
             dist: {
@@ -40,15 +66,18 @@ module.exports = function(grunt) {
                         {
                             pattern: '<link rel="stylesheet" type="text/css" href="offline/bootstrap-3.3.7.css">',
                             replacement: '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">'
+                        },
+
+                        // get concat js files
+                        {
+                            pattern: '<script src="js/jquerymods.js"></script><script src="js/dropZone.js"></script><script src="js/main.js"></script><script src="js/SoundTouch-merged.js"></script><script src="js/wavesurfer.js"></script><script src="js/wavesurfer-regions.js"></script>',
+                            replacement: '<script src="js/concat.min.js"></script>'
+                        },
+                        // get concat css files
+                        {
+                            pattern: '<link rel="stylesheet" type="text/css" href="css/myCss.css">',
+                            replacement: '<link rel="stylesheet" type="text/css" href="css/concat.css">'
                         }
-                        // {
-                        //     pattern: '',
-                        //     replacement: ''
-                        // },
-                        // {
-                        //     pattern: '',
-                        //     replacement: ''
-                        // }
 
                     ]
                 }
@@ -58,10 +87,10 @@ module.exports = function(grunt) {
         uglify: {
             development: {
                 files: [{
-                    expand: true,
-                    cwd: './build/',
-                    src: ['**/js/*.js'],
-                    dest: './build/'
+                    // expand: true,
+                    // cwd: './build/',
+                    src: 'build/js/concat.js',
+                    dest: 'build/js/concat.min.js'
                 }]
             },
             options: {
@@ -75,7 +104,7 @@ module.exports = function(grunt) {
             },
             build: {
                 expand: true,
-                src: ['./build/js/*.js'],
+                src: 'build/js/concat.js',
                 dest: ''
             }
         },
@@ -124,6 +153,7 @@ module.exports = function(grunt) {
 
 
     // Load the plugin that provides the "uglify" task.
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -135,5 +165,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('js-hint', ['jshint']);
     grunt.registerTask('html-hint', ['htmlhint']);
-    grunt.registerTask('build', ['clean', 'copy', 'string-replace', 'babel', 'uglify', 'htmlmin']);
+    grunt.registerTask('build', ['clean', 'copy', 'string-replace', 'concat', 'babel', 'uglify', 'htmlmin']); // old
+
+    // grunt.registerTask('build', ['clean:dist1', 'clean:dist2']);
+
+
 };

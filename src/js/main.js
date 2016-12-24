@@ -450,7 +450,7 @@
 
 
 	wavesurfer.on('loading', function (obj) {
-		$bar = $('#progress-bar');
+		var $bar = $('#progress-bar');
 		var str = obj + '%';
 
 		$bar.text(str); // update text value
