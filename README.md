@@ -16,8 +16,9 @@ Web App that allows you to load an audio file in your browser and hop all around
 
 ## TODO
  - Add import audio file, browse, drop. More advanced: get mp3 from youtube (legal?)
- - Add hotkeys to common functions (advanced restart bar, change speed, scroll left/right, etc.)
- - Add hotkey map
+ - ~~Add hotkeys to common functions (advanced restart bar, change speed, scroll left/right, etc.)~~
+ - ~~Add hotkey map~~
+ - fix bug where restart bar loses the place when zoomed in / out
  - Find a better way to integrate the time stretch / preserve with [WaveSurfer](wavesurfer-js.org). In the current version, I achieved this by making a mess in his library file, which I would like to abstract in the near future.
  - There are still some clicks with starting and stopping. I want to find a better way to fade in / out so that the clicks will disappear. And I want to do this by, again, not messing up WaveSurfer's library file.
 

@@ -9,6 +9,9 @@
 /node_modules
 /bower_components
 
+# wav data for test
+/src/data
+
 # IDEs and editors
 /.idea
 /.vscode

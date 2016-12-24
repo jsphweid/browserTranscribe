@@ -6,57 +6,114 @@
     top: 0px;
 }
 
-
 /*theme?*/
 /*	#D7CEC7, #565656, #76323F, #C09F80	*/
 
-
-.speedSelectDiv {
-	background-color: black;
+.inactive {
+    background-color: gray;
+    color: gray;
+}
+.inactive:hover {
+    color: gray;
 }
 
-.speedSelect {
-	list-style-type:none;
-	margin:25px 0 0 0;
-	padding:0;
-	color: #565656;
-	text-align: center;
+.allButtons {
+    margin:25px 0 0 0;
+    padding-bottom: 20px;
 }
 
-.speedSelect li {
-	float:left;
-	margin:0 5px 0 0;
-    width:50px;
-    height:40px;
-    position:relative;
+.allButtons div {
+    padding-bottom: 5px;
+    height: 39px;
 }
 
-.speedSelect label, .speedSelect input {
-    display:block;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
+.allButtons .btn {
+    width: 66px;
+    height: 34px;
 }
 
-.speedSelect input[type="radio"] {
-    opacity:0.011;
-    z-index:100;
+.speedButtons {
+
 }
 
-.speedSelect input[type="radio"]:checked + label {
-    background: #C09F80;
+.speedButtons button {
 }
 
-.speedSelect label {
-	padding:5px;
-	border:1px solid #CCC; 
-	cursor:pointer;
-    z-index:90;
-    background-color: #D7CEC7;
+.btn {
+    padding-left: 0;
+    padding-right: 0;
+}
+.btn:focus {
+  outline: none;
 }
 
-.speedSelect label:hover {
-     background:#DDD;
+.qwerty {
+
+}
+
+.qwerty button {
+}
+
+button span {
+    text-align: center;
+}
+
+#titleSpan {
+    margin-left: 20px;
+    position: absolute;
+
+}
+
+#titleSpan h1 {
+    font-size: 65px;
+}
+
+.aboutSection {
+    margin-right: 20px;
+    font-size: 13px;
+    text-align: right
+}
+
+
+/////////////////// drop zone ///////////////////*/
+
+#dropZoneManual {
+    text-align: center;
+}
+
+#dropZoneManual input {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+    margin-left: 100px;
+    margin-right: 100px;
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+
+.uploadSquare {
+    height: 150px;
+    text-align: center;
+}
+
+
+.progress-bar {
+    transition: none;
 }

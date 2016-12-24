@@ -11,7 +11,7 @@ module.exports = function(grunt) {
             main: {
                 expand: true,
                 cwd: './src',
-                src: ['./**', '!./offline/**'],
+                src: ['./**', '!./offline/**', '!./data/**'],
                 dest: './build'
             },
         },

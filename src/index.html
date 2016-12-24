@@ -13,52 +13,138 @@
 <body>
 	
 	<!-- test spacer -->
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<h1 style="text-align: center;">browserTranscribe</h1>
-		</div>
-	</div>
 
-	<!-- speed controls -->
-	<div class="container">
-		<div class="row">
-			<ul class="speedSelect">
-				<li>
-				    <input type="radio" id="25" name="percent" />
-				    <label for="25">25%</label>
-				</li>
-				<li>
-				    <input type="radio" id="35" name="percent" />
-				    <label for="35">35%</label>
-				</li>
-				<li>
-				    <input type="radio" id="50" name="percent" />
-				    <label for="50">50%</label>
-				</li>
-				<li>
-				    <input type="radio" id="75" name="percent" />
-				    <label for="75">75%</label>
-				</li>
-				<li>
-				    <input type="radio" id="100" name="percent" checked="checked"/>
-				    <label for="100">100%</label>
-				</li>
-				<li>
-				    <input type="radio" id="150" name="percent" />
-				    <label for="150">150%</label>
-				</li>
-				<li>
-				    <input type="radio" id="200" name="percent" />
-				    <label for="200">200%</label>
-				</li>				
-			</ul>			
+			<!-- <<<<<<<<<<<<<<<<< CONTROLS >>>>>>>>>>>>>>>>>> -->
+			<div class="col-md-10 allButtons">
+				<!-- speed controls -->
+				<div class="speedButtons">
+					<button data-percent=".25" id="111" class="sBtn btn inactive">25%</button>
+					<button data-percent=".35" id="222" class="sBtn btn inactive">35%</button>
+					<button data-percent=".50" id="333" class="sBtn btn inactive">50%</button>
+					<button data-percent=".75" id="444" class="sBtn btn inactive">75%</button>
+					<button data-percent="1.00" id="555" class="sBtn btn btn-primary inactive">100%</button>
+					<button data-percent="1.50" id="666" class="sBtn btn inactive">150%</button>
+					<button data-percent="2.00" id="777" class="sBtn btn inactive">200%</button>
+				</div>
+				<div class="qwerty">
+					<button style="visibility: hidden; width: 33px;"></button> <!-- spacer -->
+					<button id="qqq" class="btn inactive"><span>Catch Up</span></button>
+					<button id="www" class="btn inactive"><span>Region</span></button>
+					<button id="eee" class="btn inactive"><span></span></button>
+					<button id="rrr" class="btn inactive"><span></span></button>
+			<!-- <<<<<<<<<<<<<<<<<<< TITLE >>>>>>>>>>>>>>>>>>>> -->
+					<span id="titleSpan"><h1>browserTranscribe</h1></span>
+
+				</div>	
+				<div class="asdfg">
+					<button style="visibility: hidden; width: 47px;"></button> <!-- spacer -->
+					<button id="aaa" class="btn inactive"><span><--</span></button>
+					<button id="sss" class="btn inactive"><span>|</span></button>
+					<button id="ddd" class="btn inactive"><span>--></span></button>
+				</div>
+				<div class="zxcvb">
+					<button style="visibility: hidden; width: 80px;"></button> <!-- spacer -->
+					<button id="zzz" class="btn inactive"><span>Zoom Out</span></button>
+					<button id="xxx" class="btn inactive"><span>Zoom In</span></button>
+					<button id="ccc" class="btn inactive"><span>Center</span></button>
+				</div>	
+				<div class="spacebarBtn">
+					<button style="visibility: hidden; width: 110px;"></button> <!-- spacer -->
+					<button id="space" style="width: 300px" class="btn inactive"><span>Play/Pause</span></button>
+				</div>				
+			</div>
+
+			<div class="col-md-2">
+				<div class="row aboutSection">
+					<h3>About</h3>
+					<p>browserTranscribe is a simple tool designed to easily traverse an audio file
+					in a way that is beneficial to transcribing. Play around! It's built on top of <a href="https://wavesurfer-js.org/">WaveSurfer.js</a> among other things. More information about its development is available on its <a href="https://github.com/jsphweid/browserTranscribe">GitHub Page</a>.
+				</div>
+			</div>
+
 		</div>
+
+		<div class="row">
+		</div>
+
 	</div>
 	
 	<!-- wavesurfer -->
 	<div id="waveform">
 		<div id="verticalLine"></div>
 	</div>
+
+	<!-- /////////////// upload -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h2 style="text-align: center;">Alright, let's get your file on here.</h2>
+
+				<div class="progress">
+					<div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0"
+				  aria-valuemin="0" aria-valuemax="100" style="width:0%">
+				    0%
+					</div>
+				</div>				
+			</div>
+			<div class="col-md-3"></div>
+
+
+		</div>
+
+
+		<div class="row">
+
+
+			<!-- <<<<<<<< TOP LEFT >>>>>>>> -->
+			<div class="col-md-6 uploadSquare">		
+				<h1>1</h1>
+				<p>Try a quick sample file from the web:</p>
+				<button id="loadMusicDemo">Music</button>
+				<button id="loadSpokenWordDemo">Spoken Word</button>
+			</div>
+
+
+			<!-- <<<<<<<< TOP RIGHT >>>>>>>>> -->
+			<div class="col-md-6 uploadSquare">
+				<h1>3</h1>
+				<div id="dropZoneManual" style="width: 40%; margin-left: auto; margin-right: auto">
+					<input type="file" id="files" name="files[]" />
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="row">
+
+
+			<!-- <<<<<<<< BOTTOM LEFT >>>>>>>> -->
+			<div class="col-md-6 uploadSquare">
+				<h1>2</h1>
+				<div class="upload-drop-zone" id="drop-zone">
+					Just drag and drop your file here, buddy.
+				</div>
+			</div>
+
+
+
+			<!-- <<<<<<<< BOTTOM RIGHT >>>>>>>> -->
+			<div class="col-md-6 uploadSquare">
+				<h1>4</h1>
+				<p>Paste in a direct link to an audio file</p>
+				<input id="loadDirectLinkInput" type="text" name="" style="width: 100%; margin: 10px;"/ >
+				<button id="loadDirectLink">Load!</button>
+			</div>
+		</div>
+
+	</div>
+
+
 
 	<!-- <<<<<<<<<<<<<<<< soundtouch >>>>>>>>>>>>>>> -->
 	<script src="js/SoundTouch-merged.js"></script>
@@ -73,6 +159,26 @@
 	<script src="offline/bootstrap-3.3.7.js"></script>
 
 	<!-- <<<<<<<<<<<<<<<<<<<<< MAIN >>>>>>>>>>>>>>>>>>>> -->
+	<script src="js/jquerymods.js"></script>
+	<script src="js/dropZone.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+<!-- <<<<<<<<<<<<<<<<<< OLD >>>>>>>>>>>>>>>>>>>>> -->
+
+		<!-- I'm taking these out because at 200% it is actually worse -->
+<!-- 		<div class="row">
+			<div class="lowHigh">
+				<p>Quality Settings</p>
+				<button id="low" class="qbtn btn btn-primary">Good</button>
+				<button id="high" class="qbtn btn">Slightly Better</button>
+			</div>
+		</div> -->
