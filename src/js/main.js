@@ -182,7 +182,6 @@
 		if (REGION.holdingDown) return false;
 
 		if (REGION.creating) { // then stop
-			console.log(REGION.startCreate + ' ' + wavesurfer.backend.getCurrentTime());
 			wavesurfer.addRegion({
 				start: REGION.startCreate,
 				end: wavesurfer.backend.getCurrentTime()
@@ -202,7 +201,6 @@
 	$('#xxx').click(function() { zoom(10) });
 	var ZOOM = 1;
 	function zoom(num) {
-		console.log(ZOOM)
 		// if above minimum and coming down
 		// OR
 		// if below max and coming up
@@ -408,7 +406,6 @@
 	wavesurfer.on('region-created', function(newRegion) {
 		if (REGION.singleExistingRegion) REGION.singleExistingRegion.remove();
 		REGION.singleExistingRegion = newRegion;
-		console.log(REGION.singleExistingRegion)
 	});
 
 	// at the end of region creation
