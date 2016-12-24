@@ -70,7 +70,7 @@ module.exports = function(grunt) {
 
                         // get concat js files
                         {
-                            pattern: '<script src="js/jquerymods.js"></script><script src="js/dropZone.js"></script><script src="js/main.js"></script><script src="js/SoundTouch-merged.js"></script><script src="js/wavesurfer.js"></script><script src="js/wavesurfer-regions.js"></script>',
+                            pattern: '<script src="js/SoundTouch-merged.js"></script><script src="js/wavesurfer.js"></script><script src="js/wavesurfer-regions.js"></script><script src="js/jquerymods.js"></script><script src="js/dropZone.js"></script><script src="js/main.js"></script>',
                             replacement: '<script src="js/concat.min.js"></script>'
                         },
                         // get concat css files
