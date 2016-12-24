@@ -21,6 +21,7 @@ Web App that allows you to load an audio file in your browser and hop all around
  - fix bug where restart bar loses the place when zoomed in / out
  - add glyphicons to make it look better
  - better color scheme (make it less bootstrapy)
+ - improve quality for 25, 35, 50 by changing some backend settings when those are selected
  - Find a better way to integrate the time stretch / preserve with [WaveSurfer](wavesurfer-js.org). In the current version, I achieved this by making a mess in his library file, which I would like to abstract in the near future.
  - There are still some clicks with starting and stopping. I want to find a better way to fade in / out so that the clicks will disappear. And I want to do this by, again, not messing up WaveSurfer's library file.
 
