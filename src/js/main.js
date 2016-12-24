@@ -256,7 +256,7 @@
 	$(document).keypress(function(e) { // key press will be ignored if modifier key is pressed
 		$.each(hotkeyButtons, function(key, value) {
 			if (e.keyCode === value[0] || e.keyCode === value[1]) { // found key
-				$key = $('#' + key);
+				var $key = $('#' + key);
 				if (!value[2]) { // if not toggle
 					$key.addClass('btn-primary');
 					if ($.inArray(key, keysCurrentlyPressed) === -1) { // if not already in there
