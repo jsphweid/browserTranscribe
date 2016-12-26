@@ -202,7 +202,7 @@
 	});
 	$('#zzz').click(function() { zoom(-10) });
 	$('#xxx').click(function() { zoom(10) });
-	var ZOOM = 1;
+	var ZOOM = 20;
 	function zoom(num) {
 		// if above minimum and coming down
 		// OR
@@ -448,7 +448,6 @@
 		resetProgressBar();
 		var link = $('#loadDirectLinkInput').val();
 		wavesurfer.load(link);
-
 	});
 
 
@@ -468,6 +467,10 @@
 		$('#progress-bar').text('0%').css('width', '0%').attr('aria-valuenow', 0);
 	}
 
+	wavesurfer.on('zoom', function (minPxPerSec) {
+		// redraw restart bar
+		RESTART.setTime(RESTART.time);
+	});
 
 
 $(document).ready(function() { 
