@@ -1,5 +1,8 @@
 // (function() {
 
+	// add titles to speed buttons...
+	$('.sBtn').attr('title', 'Set the playback percentage while keeping the pitch preserved.')
+
 	var REGION = {
 		current: [],
 		creating: false,

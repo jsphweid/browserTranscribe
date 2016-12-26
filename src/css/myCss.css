@@ -44,7 +44,18 @@
     padding-right: 0;
 }
 .btn:focus {
-  outline: none;
+    outline: none;
+}
+
+.textBtn {
+    padding: 0;
+}
+.textBtn span {
+    white-space: normal;
+    display: block;
+    line-height: 1;
+    word-break: break-word;
+    white-space: normal; /* override bootstrap's default btn, no break */
 }
 
 .qwerty {
@@ -75,37 +86,36 @@ button span {
 }
 
 
-/////////////////// drop zone ///////////////////*/
 
 #dropZoneManual {
-    text-align: center;
+text-align: center;
 }
 
 #dropZoneManual input {
-    margin-right: auto;
-    margin-left: auto;
+margin-right: auto;
+margin-left: auto;
 }
 
 /* layout.css Style */
 .upload-drop-zone {
-  height: 200px;
-  border-width: 2px;
-  margin-bottom: 20px;
+    height: 200px;
+    border-width: 2px;
+    margin-bottom: 20px;
 }
 
 /* skin.css Style*/
 .upload-drop-zone {
     margin-left: 100px;
     margin-right: 100px;
-  color: #ccc;
-  border-style: dashed;
-  border-color: #ccc;
-  line-height: 200px;
-  text-align: center
+    color: #ccc;
+    border-style: dashed;
+    border-color: #ccc;
+    line-height: 200px;
+    text-align: center
 }
 .upload-drop-zone.drop {
-  color: #222;
-  border-color: #222;
+    color: #222;
+    border-color: #222;
 }
 
 .uploadSquare {
@@ -113,7 +123,10 @@ button span {
     text-align: center;
 }
 
-
 .progress-bar {
     transition: none;
+}
+
+.glyphicon {
+    line-height: 0;
 }

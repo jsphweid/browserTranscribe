@@ -15,11 +15,11 @@ Web App that allows you to load an audio file in your browser and hop all around
 
 
 ## TODO
- - Add import audio file, browse, drop. More advanced: get mp3 from youtube (legal?)
+ - ~Add import audio file, browse, drop. More advanced: get mp3 from youtube (legal?)~
  - ~~Add hotkeys to common functions (advanced restart bar, change speed, scroll left/right, etc.)~~
  - ~~Add hotkey map~~
  - fix bug where restart bar loses the place when zoomed in / out
- - add glyphicons to make it look better
+ - ~add glyphicons to make it look better~
  - better color scheme (make it less bootstrapy)
  - improve quality for 25, 35, 50 by changing some backend settings when those are selected
  - padding on the bottom
