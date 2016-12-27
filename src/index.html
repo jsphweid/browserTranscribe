@@ -38,8 +38,8 @@
 				</div>
 				<div class="qwerty">
 					<button style="visibility: hidden; width: 33px;"></button> <!-- spacer -->
-					<button id="qqq" class="btn inactive"><span>Catch Up</span></button>
-					<button id="www" class="btn inactive"><span>Region</span></button>
+					<button id="qqq" title="Position the restart bar where the current progress bar is." class="btn inactive"><span class="glyphicon glyphicon-arrow-right"></span> |</button>
+					<button id="www" title="Create a loop region. Click once to place a beginning point and click again to place the end and start the loop. If using the keyboard hotkey, simply press and hold to begin and release to end." class="btn inactive textBtn"><span>Create Region</span></button>
 					<button id="eee" class="btn inactive"><span></span></button>
 					<button id="rrr" class="btn inactive"><span></span></button>
 			<!-- <<<<<<<<<<<<<<<<<<< TITLE >>>>>>>>>>>>>>>>>>>> -->
@@ -48,19 +48,25 @@
 				</div>	
 				<div class="asdfg">
 					<button style="visibility: hidden; width: 47px;"></button> <!-- spacer -->
-					<button id="aaa" class="btn inactive"><span>&lt;--</span></button>
-					<button id="sss" class="btn inactive"><span>|</span></button>
-					<button id="ddd" class="btn inactive"><span>--&gt;</span></button>
+					<button id="aaa" title="Scroll Left." class="btn inactive"><span class="glyphicon glyphicon-step-backward"></span></button>
+					<button id="sss" title="Place the restart and progress bars in the center of the screen." class="btn inactive">
+						<span class="glyphicon glyphicon-arrow-right"></span>
+						<span style="font-size: 20px;"><b>|</b></span>
+						<span class="glyphicon glyphicon-arrow-left"></span>
+					</button>
+					<button id="ddd" title="Scroll Right." class="btn inactive"><span class="glyphicon glyphicon-step-forward"></span></button>
 				</div>
 				<div class="zxcvb">
 					<button style="visibility: hidden; width: 80px;"></button> <!-- spacer -->
-					<button id="zzz" class="btn inactive"><span>Zoom Out</span></button>
-					<button id="xxx" class="btn inactive"><span>Zoom In</span></button>
-					<button id="ccc" class="btn inactive"><span>Center</span></button>
+					<button id="zzz" title="Zoom Out." class="btn inactive"><span class="glyphicon glyphicon-zoom-out"></span></button>
+					<button id="xxx" title="Zoom In." class="btn inactive"><span class="glyphicon glyphicon-zoom-in"></span></button>
+					<button id="ccc" title="Toggle auto centering: the screen follows the progress bar by keeping it in the center whenever possible." class="btn inactive textBtn"><span>Auto Center</span></button>
 				</div>	
 				<div class="spacebarBtn">
 					<button style="visibility: hidden; width: 110px;"></button> <!-- spacer -->
-					<button id="space" style="width: 300px" class="btn inactive"><span>Play/Pause</span></button>
+					<button id="space" title="Toggle Play / Pause." style="width: 300px" class="btn inactive">
+					<span class="glyphicon glyphicon-play"></span> / <span class="glyphicon glyphicon-pause"></span>
+					</button>
 				</div>				
 			</div>
 
