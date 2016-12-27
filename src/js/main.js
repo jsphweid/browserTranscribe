@@ -1,7 +1,7 @@
 // (function() {
 
 	// add titles to speed buttons...
-	$('.sBtn').attr('title', 'Set the playback percentage while keeping the pitch preserved.')
+	$('.sBtn').attr('title', 'Set the playback percentage while keeping the pitch preserved.');
 
 	var REGION = {
 		current: [],
@@ -345,6 +345,7 @@
 	    scrollParent: true,
 	    cursorWidth: 2,
 	    barWidth: 1,
+	    renderer: 'MultiCanvas', // support for rendering longer files
 	    autoCenter: false // but jump after a few seconds
 	});
 

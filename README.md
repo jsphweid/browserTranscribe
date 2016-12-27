@@ -15,18 +15,24 @@ Web App that allows you to load an audio file in your browser and hop all around
 
 
 ## TODO
+#### Easy
+ - better color scheme (make it less bootstrapy)
+ 
+#### Harder
+ - Find a better way to integrate the time stretch / preserve with [WaveSurfer](wavesurfer-js.org). In the current version, I achieved this by making a mess in his library file, which I would like to abstract in the near future.
+ - There are still some clicks with starting and stopping. I want to find a better way to fade in / out so that the clicks will disappear. And I want to do this by, again, not messing up WaveSurfer's library file.
+
+#### Hardest
+ - Find any way to optimize the quality when the sound is stretched. I've tried tweaking some settings in the SoundTouch library, but they make hardly any difference and pushing them to an extreme crashes the browser. Particularly the speeds: 25, 35, and 50.
+
+ ### Completed
  - ~~Add import audio file, browse, drop. More advanced: get mp3 from youtube (legal?)~~
  - ~~Add hotkeys to common functions (advanced restart bar, change speed, scroll left/right, etc.)~~
  - ~~Add hotkey map~~
  - ~~fix bug where restart bar loses the place when zoomed in / out~~
  - ~~add glyphicons to make it look better~~
- - better color scheme (make it less bootstrapy)
- - improve quality for 25, 35, 50 by changing some backend settings when those are selected
  - ~~padding on the bottom~~
- - have no div for wavesurfer on start? (still an issue? https://github.com/katspaugh/wavesurfer.js/issues/899)
- - multicanvas support will fix longer files?
- - Find a better way to integrate the time stretch / preserve with [WaveSurfer](wavesurfer-js.org). In the current version, I achieved this by making a mess in his library file, which I would like to abstract in the near future.
- - There are still some clicks with starting and stopping. I want to find a better way to fade in / out so that the clicks will disappear. And I want to do this by, again, not messing up WaveSurfer's library file.
+ - ~~multicanvas support will fix longer files?~~
 
 ## Future Direction
 ##### Drum Transcribing
