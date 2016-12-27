@@ -17,6 +17,7 @@ Web App that allows you to load an audio file in your browser and hop all around
 ## TODO
 #### Easy
  - better color scheme (make it less bootstrapy)
+ - Refactor code in main.js ....
  
 #### Harder
  - Find a better way to integrate the time stretch / preserve with [WaveSurfer](wavesurfer-js.org). In the current version, I achieved this by making a mess in his library file, which I would like to abstract in the near future.

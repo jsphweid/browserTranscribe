@@ -3,6 +3,13 @@
 	// add titles to speed buttons...
 	$('.sBtn').attr('title', 'Set the playback percentage while keeping the pitch preserved.');
 
+	var WAVESURFER_ELEMENTS = {
+		$progressWave: null
+	};
+	function updateWaveSurferElements() {
+		WAVESURFER_ELEMENTS.$progressWave = $(wavesurfer.mediaContainer).children(1).children(0).slice(0, 1);
+	}
+
 	var REGION = {
 		current: [],
 		creating: false,
@@ -178,6 +185,7 @@
 		if (REGION.holdingDown && !REGION.creating) {
 			REGION.creating = true;
 			REGION.startCreate = wavesurfer.backend.getCurrentTime();
+			WAVESURFER_ELEMENTS.$progressWave.css("border-right-color", "#337ab7"); // change progress bar color
 			return false;
 		}
 
@@ -195,9 +203,11 @@
 			RESTART.setQueuePoints(REGION.getStartTime());
 			SEEK.needsUpdated = true;
 			wavesurfer.seekTo(REGION.startCreate / wavesurfer.backend.getDuration());
+			WAVESURFER_ELEMENTS.$progressWave.css("border-right-color", wavesurfer.params.cursorColor); // change progress bar color back
 		} else { // start
 			REGION.creating = true;
 			REGION.startCreate = wavesurfer.backend.getCurrentTime();
+			WAVESURFER_ELEMENTS.$progressWave.css("border-right-color", "#337ab7"); // change progress bar color
 		}
 	});
 	$('#zzz').click(function() { zoom(-10) });
@@ -360,6 +370,9 @@
 
 	// on wavesurfer load
 	wavesurfer.on('ready', function () {
+
+		// load wavesurfer elements into global object
+		updateWaveSurferElements();
 
 		// activate hotkeys
 		activateHotkeys();
