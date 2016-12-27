@@ -887,6 +887,7 @@ WaveSurfer.WebAudio = {
 
             // his
             var time = my.getCurrentTime();
+            console.log('current time is: ' + time + ', and total duration is: ' + my.getDuration());
 
             if (time >= my.getDuration()) {
                 my.setState(my.FINISHED_STATE);
@@ -897,11 +898,17 @@ WaveSurfer.WebAudio = {
                 my.fireEvent('audioprocess', time);
 
                 // mine
+                // 'not finishing issue' - I believe what is going on, is that it is running
+                // out of frames earlier than the playback is finished because it doesn't have
+                // the 'excess' required to chop sound bits up and 'slow down' right before
+                // the end, so it has to be stopped slightly earlier....  other solutions welcome
                 var l = e.outputBuffer.getChannelData(0);
                 var r = e.outputBuffer.getChannelData(1);
                 var framesExtracted = my.f.extract(my.samples, my.scriptBufferSize);
                 if (framesExtracted == 0) {
                     my.scriptNode.disconnect();
+                    my.setState(my.FINISHED_STATE);
+                    my.fireEvent('pause');                 
                 }
                 for (var i = 0; i < framesExtracted; i++) {
                     l[i] = my.samples[i * 2];
