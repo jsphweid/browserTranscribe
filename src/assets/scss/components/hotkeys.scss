@@ -1,0 +1,41 @@
+.hotkeys {
+
+    Button {
+        width: 66px;
+        height: 34px;
+        margin: 2px 2px 2px 2px;
+
+        span {
+            display: block;
+            line-height: 1;
+            white-space: normal;
+        }
+
+    }
+
+    .noPadding {
+        padding: 0px;
+    }
+
+    .playPauseBtn {
+        width: 300px;
+    }
+
+    .qwerRow {
+        margin-left: 25px;
+    }
+
+    .asdfRow {
+        margin-left: 38px;
+    }
+
+    .zxcvRow {
+        margin-left: 69px;
+    }
+
+    .spacebarRow {
+        margin-left: 100px;
+    }
+
+
+}

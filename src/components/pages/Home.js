@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import Hotkeys from '../elements/Hotkeys'
 
-const HomePage = () => (
-        <p>Welcome...</p>
-)
+class MainApp extends Component {
 
-export default HomePage
+    render() {
+        return (
+            <Hotkeys />
+        )
+    }
+}
+
+
+const mapStateToProps = (state) => ({
+    // servicesList: state.shop.servicesList,
+})
+
+export default connect(mapStateToProps)(MainApp)

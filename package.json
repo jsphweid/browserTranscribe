@@ -64,7 +64,13 @@
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.30.10",
+    "react-dom": "^15.5.4",
     "react-test-renderer": "^15.4.2",
+    "react-wavesurfer": "^0.8.3",
     "redux-thunk": "^2.2.0"
   }
 }

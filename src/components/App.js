@@ -4,7 +4,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import configureStore from '../middleware/store'
 
-import HomePage from './pages/Home'
+import MainApp from './pages/Home'
 
 let initialState = {}
 
@@ -14,7 +14,7 @@ const App = () => (
     <Provider store={store}>
         <HashRouter>
             <Switch>
-                <Route exact path="/" component={HomePage} />
+                <Route exact path="/" component={MainApp} />
             </Switch>
         </HashRouter>
     </Provider>
