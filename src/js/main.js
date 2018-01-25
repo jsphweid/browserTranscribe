@@ -456,7 +456,7 @@
 
 	$('#loadMusicDemo').click(function() {
 		resetProgressBar();
-		wavesurfer.load('https://dl.dropboxusercontent.com/u/67477162/perm/cosmos.mp3');
+		wavesurfer.load('https://s3.amazonaws.com/random-static-content/cosmos.mp3');
 	});
 	$('#loadDirectLink').click(function() {
 		resetProgressBar();
