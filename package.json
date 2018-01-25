@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "build": "grunt build",
-    "deploy": "grunt build && node build.js",
+    "deploy": "grunt build && node deploy.js",
     "start": "http-server ./src -a localhost -p 8000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
