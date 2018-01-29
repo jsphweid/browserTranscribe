@@ -5,9 +5,8 @@
   "main": "main.js",
   "scripts": {
     "build": "grunt build",
-    "deploy": "grunt build && ./deploy.sh",
-    "start": "http-server ./src -a localhost -p 8000",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npm run build && ./deploy.sh",
+    "start": "http-server ./src -a localhost -p 8000"
   },
   "repository": {
     "type": "git",
